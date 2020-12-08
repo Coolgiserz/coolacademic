@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>宋玉娇 | GeoXLab</title>
+    <link>https://Coolgiserz.github.io/author/%E5%AE%8B%E7%8E%89%E5%A8%87/</link>
+      <atom:link href="https://Coolgiserz.github.io/author/%E5%AE%8B%E7%8E%89%E5%A8%87/index.xml" rel="self" type="application/rss+xml" />
+    <description>宋玉娇</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 Sep 2019 23:04:18 +0800</lastBuildDate>
+    <image>
+      <url>https://Coolgiserz.github.io/images/icon_hu7b160baf32208591b8471c4ebed0aa09_84475_512x512_fill_lanczos_center_2.png</url>
+      <title>宋玉娇</title>
+      <link>https://Coolgiserz.github.io/author/%E5%AE%8B%E7%8E%89%E5%A8%87/</link>
+    </image>
+    
+    <item>
+      <title>T-GCN: A Temporal Graph Convolutional Network for Traffic Prediction</title>
+      <link>https://Coolgiserz.github.io/publication/tgcn/</link>
+      <pubDate>Sat, 07 Sep 2019 23:04:18 +0800</pubDate>
+      <guid>https://Coolgiserz.github.io/publication/tgcn/</guid>
+      <description>&lt;p&gt;本文提出了一种基于神经网络的新型交通预测方法，称为T-GCN，它结合了GCN和GRU。我们采用图网络对城市道路网进行建模，图上的节点代表道路，边代表道路之间的连接关系，道路上的交通信息被描述为图上节点的属性。一方面，利用GCN捕捉图的拓扑结构，得到空间上的依赖性；另一方面，利用GRU模型捕捉节点属性的动态变化，得到时间上的依赖性。最终采用T-GCN模型来解决时空交通预测任务。在两个真实世界的交通数据集上进行评估，并与HA模型、ARIMA模型、SVR模型、GCN模型和GRU模型进行比较，T-GCN模型在不同的预测视野下取得了最好的预测效果。此外，扰动分析也说明了我们方法的稳健性。综上所述，T-GCN模型可以成功-充分捕捉交通数据的时空特征，并且不局限于交通预测，还可以应用于其他时空任务。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
