@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | GeoXLab</title>
-    <link>https://Coolgiserz.github.io/categories/</link>
-      <atom:link href="https://Coolgiserz.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <title>Categories | Wowchemy Research Group</title>
+    <link>/categories/</link>
+      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 Sep 2019 23:41:03 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© Research Group</copyright>
     <image>
-      <url>https://Coolgiserz.github.io/images/icon_hu7b160baf32208591b8471c4ebed0aa09_84475_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Categories</title>
-      <link>https://Coolgiserz.github.io/categories/</link>
+      <link>/categories/</link>
     </image>
     
   </channel>

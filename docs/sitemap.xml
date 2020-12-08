@@ -3,106 +3,114 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://Coolgiserz.github.io/authors/</loc>
-    <lastmod>2019-09-07T23:41:03+08:00</lastmod>
+    <loc>/event/example/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/categories/</loc>
-    <lastmod>2019-09-07T23:41:03+08:00</lastmod>
+    <loc>/event/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/</loc>
-    <lastmod>2019-09-07T23:41:03+08:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/category/%E5%9B%BD%E5%AE%B6%E8%87%AA%E7%84%B6%E7%A7%91%E5%AD%A6%E5%9F%BA%E9%87%91/</loc>
-    <lastmod>2019-09-07T23:41:03+08:00</lastmod>
+    <loc>/post/20-12-02-icml-best-paper/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/author/%E6%9D%8E%E6%B5%B7%E5%B3%B0/</loc>
-    <lastmod>2019-09-07T23:41:03+08:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/project/geo_topo/</loc>
-    <lastmod>2019-09-07T23:41:03+08:00</lastmod>
+    <loc>/post/20-12-01-wowchemy-prize/</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/project/</loc>
-    <lastmod>2019-09-07T23:41:03+08:00</lastmod>
+    <loc>/publication-type/3/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/publication-type/2/</loc>
-    <lastmod>2019-09-07T23:04:18+08:00</lastmod>
+    <loc>/publication/preprint/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/publication_types/</loc>
-    <lastmod>2019-09-07T23:04:18+08:00</lastmod>
+    <loc>/authors/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/publication/tgcn/</loc>
-    <lastmod>2019-09-07T23:04:18+08:00</lastmod>
+    <loc>/author/nelson-bighetti/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/author/%E5%AE%8B%E7%8E%89%E5%A8%87/</loc>
-    <lastmod>2019-09-07T23:04:18+08:00</lastmod>
+    <loc>/publication_types/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/publication/</loc>
-    <lastmod>2019-09-07T23:04:18+08:00</lastmod>
+    <loc>/publication/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/author/%E8%B5%B5%E7%8E%B2/</loc>
-    <lastmod>2019-09-07T23:04:18+08:00</lastmod>
+    <loc>/tag/source-themes/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/people/</loc>
+    <loc>/publication/journal-article/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/talk/</loc>
+    <loc>/author/robert-ford/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/tags/</loc>
+    <loc>/publication-type/1/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/author/%E4%B8%98%E5%A4%84%E6%9C%BA/</loc>
+    <loc>/publication/conference-paper/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/post/</loc>
+    <loc>/contact/</loc>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/author/%E6%9D%8E%E6%B5%B7%E5%B3%B0/</loc>
+    <loc>/people/</loc>
   </url>
   
   <url>
-    <loc>https://Coolgiserz.github.io/author/%E7%8E%8B%E5%A4%84%E4%B8%80/</loc>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
   
 </urlset>
