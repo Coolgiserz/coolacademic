@@ -1,5 +1,5 @@
 ---
-title: Recent & Upcoming Events
+title: 近期趣事
 
 # This is the event/talk archive page.
 layout: talk

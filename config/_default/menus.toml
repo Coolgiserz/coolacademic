@@ -4,31 +4,31 @@
 #   The weight parameter defines the order that the links will appear in.
 
 #[[main]]
-#  name = "Home"
+#  name = "主页"
 #  url = "/"
 #  weight = 10
 
 [[main]]
-  name = "News"
+  name = "博客"
   url = "post"
   weight = 20
 
-[[main]]
-  name = "People"
-  url = "people"
-  weight = 30
+#[[main]]
+#  name = "People"
+#  url = "people"
+#  weight = 30
 
 [[main]]
-  name = "Events"
+  name = "事件"
   url = "event"
   weight = 40
 
 [[main]]
-  name = "Publications"
+  name = "论文"
   url = "publication"
   weight = 50
 
 [[main]]
-  name = "Contact"
+  name = "联系"
   url = "contact"
   weight = 60
