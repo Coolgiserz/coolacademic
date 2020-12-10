@@ -19,7 +19,7 @@
 #  weight = 30
 
 [[main]]
-  name = "事件"
+  name = "趣事"
   url = "event"
   weight = 40
 
