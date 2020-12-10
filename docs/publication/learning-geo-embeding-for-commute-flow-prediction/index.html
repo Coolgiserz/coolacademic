@@ -1,0 +1,1089 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 4.8.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="CoolCats">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="根据基础设施和土地使用信息预测通勤流量对于城市规划和公共政治发展至关重要。然而，由于通勤流的复杂模式，这是一项具有挑战性的任务。传统的模型，如重力模型，主要是从物理学原理中得出的，在现实世界中需要考虑很多因素的情况下，其预测能力有限。同时，现有大多数机器学习的方法忽略了空间相关性，没有对区域间的依赖关系进行建模。为了解决这些问题，我们提出了Geo-contextual Multitask Embedding Learner(GMEL)，一个从地理上下文信息中捕捉空间相关性的模型，用于通勤流量预测。具体来说，我们首先构建了一个包含地理上下文信息的地理适应性网络。然后，提出了一种基于图注意力网络（GAT）框架的注意力机制，以捕捉空间相关性，并将地理环境信息编码到嵌入空间。两种不同的GAT分别用来模拟供给和需求的特征。 为了提高嵌入表示的有效性，多任务学习框架用于引入更强的限制，迫使嵌入封装- sulate流量预测的有效表示。最后，基于学习到的EM- beddings训练梯度提升机来预测换乘流量。我们使用纽约市的真实世界数据集来评估我们的模型，经验-心理结果证明了我们所提出的方法与现有技术的有效性。">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="CoolCats">
+  <meta property="og:url" content="https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/">
+  <meta property="og:title" content="「论文阅读」-学习用于通勤流嵌入的地理上下文嵌入 | CoolCats">
+  <meta property="og:description" content="根据基础设施和土地使用信息预测通勤流量对于城市规划和公共政治发展至关重要。然而，由于通勤流的复杂模式，这是一项具有挑战性的任务。传统的模型，如重力模型，主要是从物理学原理中得出的，在现实世界中需要考虑很多因素的情况下，其预测能力有限。同时，现有大多数机器学习的方法忽略了空间相关性，没有对区域间的依赖关系进行建模。为了解决这些问题，我们提出了Geo-contextual Multitask Embedding Learner(GMEL)，一个从地理上下文信息中捕捉空间相关性的模型，用于通勤流量预测。具体来说，我们首先构建了一个包含地理上下文信息的地理适应性网络。然后，提出了一种基于图注意力网络（GAT）框架的注意力机制，以捕捉空间相关性，并将地理环境信息编码到嵌入空间。两种不同的GAT分别用来模拟供给和需求的特征。 为了提高嵌入表示的有效性，多任务学习框架用于引入更强的限制，迫使嵌入封装- sulate流量预测的有效表示。最后，基于学习到的EM- beddings训练梯度提升机来预测换乘流量。我们使用纽约市的真实世界数据集来评估我们的模型，经验-心理结果证明了我们所提出的方法与现有技术的有效性。"><meta property="og:image" content="https://coolgiserz.github.io/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://coolgiserz.github.io/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-12-09T20:18:23&#43;08:00">
+    
+    <meta property="article:modified_time" content="2020-12-09T20:18:23&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/"
+  },
+  "headline": "「论文阅读」-学习用于通勤流嵌入的地理上下文嵌入",
+  
+  "datePublished": "2020-12-09T20:18:23+08:00",
+  "dateModified": "2020-12-09T20:18:23+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "CoolCats"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "CoolCats",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://coolgiserz.github.io/images/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "根据基础设施和土地使用信息预测通勤流量对于城市规划和公共政治发展至关重要。然而，由于通勤流的复杂模式，这是一项具有挑战性的任务。传统的模型，如重力模型，主要是从物理学原理中得出的，在现实世界中需要考虑很多因素的情况下，其预测能力有限。同时，现有大多数机器学习的方法忽略了空间相关性，没有对区域间的依赖关系进行建模。为了解决这些问题，我们提出了Geo-contextual Multitask Embedding Learner(GMEL)，一个从地理上下文信息中捕捉空间相关性的模型，用于通勤流量预测。具体来说，我们首先构建了一个包含地理上下文信息的地理适应性网络。然后，提出了一种基于图注意力网络（GAT）框架的注意力机制，以捕捉空间相关性，并将地理环境信息编码到嵌入空间。两种不同的GAT分别用来模拟供给和需求的特征。 为了提高嵌入表示的有效性，多任务学习框架用于引入更强的限制，迫使嵌入封装- sulate流量预测的有效表示。最后，基于学习到的EM- beddings训练梯度提升机来预测换乘流量。我们使用纽约市的真实世界数据集来评估我们的模型，经验-心理结果证明了我们所提出的方法与现有技术的有效性。"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>「论文阅读」-学习用于通勤流嵌入的地理上下文嵌入 | CoolCats</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  
+  
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">CoolCats</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">CoolCats</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/post"><span>博客</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/event"><span>事件</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publication"><span>论文</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/contact"><span>联系</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+
+      
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  <div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>「论文阅读」-学习用于通勤流嵌入的地理上下文嵌入</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span ><a href="/author/coolcats/">CoolCats</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    December 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/%E9%80%9A%E5%8B%A4%E6%B5%81%E9%A2%84%E6%B5%8B/">通勤流预测</a>, <a href="/category/%E5%B5%8C%E5%85%A5%E5%AD%A6%E4%B9%A0/">嵌入学习</a>, <a href="/category/aaai/">AAAI</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="/publication/learning-geo-embeding-for-commute-flow-prediction/learning-geo-embeding-for-commute-flow-prediction.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="/publication/learning-geo-embeding-for-commute-flow-prediction/slides.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract">Predicting commuting flows based on infrastructure and land- use information is critical for urban planning and public pol- icy development. However, it is a challenging task given the complex patterns of commuting flows. Conventional mod- els, such as gravity model, are mainly derived from physics principles and limited by their predictive power in real-world scenarios where many factors need to be considered. Mean- while, most existing machine learning-based methods ignore the spatial correlations and fail to model the influence of nearby regions. To address these issues, we propose Geo- contextual Multitask Embedding Learner (GMEL), a model that captures the spatial correlations from geographic contex- tual information for commuting flow prediction. Specifically, we first construct a geo-adjacency network containing the ge- ographic contextual information. Then, an attention mecha- nism is proposed based on the framework of graph attention network (GAT) to capture the spatial correlations and encode geographic contextual information to embedding space. Two separate GATs are used to model supply and demand charac- teristics. To enhance the effectiveness of the embedding rep- resentation, a multitask learning framework is used to intro- duce stronger restrictions, forcing the embeddings to encap- sulate effective representation for flow prediction. Finally, a gradient boosting machine is trained based on the learned em- beddings to predict commuting flows. We evaluate our model using real-world dataset from New York City and the experi- mental results demonstrate the effectiveness of our proposed method against the state of the art.</p>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            
+            
+            <a href="/publication/#1">
+              Conference paper
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">AAAI Conference on Artificial Intelligence</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><h1 id="learning-geo-contextual-embeddings-for-commuting-flow-prediction">Learning Geo-Contextual Embeddings for Commuting Flow Prediction</h1>
+<h2 id="0x00-引言">0x00 引言</h2>
+<p>本文章题为“用于<strong>通勤流</strong>预测的<strong>地理上下文嵌入</strong>学习”。</p>
+<p>关键几个问题：</p>
+<ul>
+<li>什么是通勤流？</li>
+<li>什么是地理上下文？</li>
+<li>如何对地理上下文信息进行嵌入学习？</li>
+<li>该方法工作效果如何？存在什么缺陷吗？</li>
+</ul>
+<h3 id="通勤流">通勤流</h3>
+<h4 id="什么是通勤流">什么是通勤流？</h4>
+<p>通勤是一种从家到工作地的往返过程。日复一日的通勤行为形成了一个与社会经济因素密切关联的复杂网络。</p>
+<p>通勤流也被看作城市规划中的一个基本问题，因为其揭示了城市中劳动力供给与需求之间的空间关系。所以从城市规划的角度来看，有必要研究基础设施和土地利用对通勤流的影响。</p>
+<p><img src="images/network.png" alt="通勤网络"></p>
+<center>通勤流</center>
+<h4 id="通勤流预测与交通流预测有何区别">通勤流预测与交通流预测有何区别？</h4>
+<p>说的通勤流预测可能又容易联想到交通流预测，两者有什么区别呢？</p>
+<p>交通流预测是一个时序预测问题，在技术实现上需要将历史轨迹信息作为输入特征；而通勤流预测旨在揭示城市中劳动力供给侧与需求侧之间的空间关系，通常是只用节点属性信息（基建、土地利用）预测的是边级别的信号（如通勤流的大小）。</p>
+<h2 id="0x01-相关工作">0x01 相关工作</h2>
+<h3 id="通勤流相关工作">通勤流相关工作</h3>
+<p>针对通勤流预测问题，人们以前有用重力模型、非参数模型、介入机会模型。</p>
+<p>然而：</p>
+<p>(1) 重力模型只是简单地将物理定律搬过来，实际上不能很好地刻画复杂的通勤模式，应用效果不理想。</p>
+<p>(2) 现有的大多数机器学习模型只用OD点的节点属性特征，忽略了区域之间的空间依赖性</p>
+<p>介入机会模型倒是考虑了出发地、目的地周边对中心的影响，本文提出的地理上下文嵌入便受到这类方法的启发。</p>
+<h3 id="图表征相关工作">图表征相关工作</h3>
+<p>图表征学习方面也有很多利用节点属性、节点邻域信息的方法，本文方法主要受GAT的影响，将自注意力机制引入到通勤流预测上，捕获地理上下文信息。</p>
+<h2 id="0x02-本文观点">0x02 本文观点</h2>
+<p>至此本文方法的基本框架已经出来了。</p>
+<ol>
+<li>针对通勤网络</li>
+<li>通过地理上下文嵌入学习地理单元及其上下文信息，通过多任务预测损失函数约束嵌入向量中的信息更适合进行通勤流预测。所谓的地理上下文信息就是指地理单元周围的POI、土地利用等信息，抽象来说就是邻域节点的属性。</li>
+</ol>
+<p><img src="images/gmel.png" alt="GMEL"><center>GMEL</center></p>
+<h3 id="用gat将地理上下文信息编码到嵌入空间中">用GAT将地理上下文信息编码到嵌入空间中</h3>
+<p>这里要注意的是文章提出用2个GAT分别建模出发地和目的地的特征，即要把劳动供给侧和需求侧的特征进行解耦。</p>
+<p>然后通过多任务学习框架约束嵌入向量更适应于流预测表示。</p>
+<h3 id="通过多任务学习框架约束嵌入向量更适应于通勤流预测">通过多任务学习框架约束嵌入向量更适应于通勤流预测</h3>
+<p>主任务自然是通勤流预测，子任务是预测两个地理单元（出发地和目的地）的流入/流出量，这背后的直觉是通勤流与地理单元的流入/流出量之间高度相关，引入这两个子任务可以约束嵌入向量包含更多有助于通勤流预测的信息（监督信号）。</p>
+<h3 id="基于gmel和多任务学习框架的通勤流预测">基于GMEL和多任务学习框架的通勤流预测</h3>
+<p>前面基于GMEL可以获得地理单元的嵌入向量，基于这些向量在训练一个回归学习器（如梯度提升树、随机森林）便能进行通勤流预测。算法如下：</p>
+<ol>
+<li>端到端地训练一个GMEL（预训练过程）</li>
+<li>基于嵌入向量再训练一个流预测模型</li>
+</ol>
+<p><img src="images/algo.png" alt="GMEL"></p>
+<center>训练算法</center>
+<h2 id="0x03-实验">0x03 实验</h2>
+<p>实验部分需要验证的点包括：</p>
+<ul>
+<li>地理上下文信息是否真的有助于通勤流预测？</li>
+<li>使用两个GAT分别建模供给特征和需求特征是多此一举吗？</li>
+<li>有必要引入多任务学习框架吗？</li>
+</ul>
+<h3 id="实验环境">实验环境</h3>
+<p>用到了通勤流、土地利用的数据集和距离计算的包。</p>
+<h3 id="实验结果">实验结果</h3>
+<p>观察实验结果可发现：</p>
+<ul>
+<li>所有GMEL系列的模型都比基准模型要好，表明地理上下文信息有助于通勤流来说</li>
+<li>标准的GMEL比另外两个变种表现好，验证了多任务学习框架的有效性和对供需特征解耦的必要性</li>
+</ul>
+<p><img src="images/test_set.png" alt="测试集"></p>
+<center>测试表现</center>
+<p>参数敏感性分析 、残差分析也表明方法的鲁棒性。</p>
+<p><img src="images/residual.png" alt="残差"></p>
+<center>残差分析</center>
+<h2 id="0x04-结论">0x04 结论</h2>
+<p>总结全文，文章提出利用地理上下文信息预测通勤流，并提出一个嵌入学习框架来学习地理单元的上下文信息，结果表明引入这种信息是有助于通勤流预测的。</p>
+</div>
+
+    
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/%E5%B5%8C%E5%85%A5%E5%AD%A6%E4%B9%A0/">嵌入学习</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/&amp;text=%e3%80%8c%e8%ae%ba%e6%96%87%e9%98%85%e8%af%bb%e3%80%8d-%e5%ad%a6%e4%b9%a0%e7%94%a8%e4%ba%8e%e9%80%9a%e5%8b%a4%e6%b5%81%e5%b5%8c%e5%85%a5%e7%9a%84%e5%9c%b0%e7%90%86%e4%b8%8a%e4%b8%8b%e6%96%87%e5%b5%8c%e5%85%a5" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/&amp;t=%e3%80%8c%e8%ae%ba%e6%96%87%e9%98%85%e8%af%bb%e3%80%8d-%e5%ad%a6%e4%b9%a0%e7%94%a8%e4%ba%8e%e9%80%9a%e5%8b%a4%e6%b5%81%e5%b5%8c%e5%85%a5%e7%9a%84%e5%9c%b0%e7%90%86%e4%b8%8a%e4%b8%8b%e6%96%87%e5%b5%8c%e5%85%a5" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%e3%80%8c%e8%ae%ba%e6%96%87%e9%98%85%e8%af%bb%e3%80%8d-%e5%ad%a6%e4%b9%a0%e7%94%a8%e4%ba%8e%e9%80%9a%e5%8b%a4%e6%b5%81%e5%b5%8c%e5%85%a5%e7%9a%84%e5%9c%b0%e7%90%86%e4%b8%8a%e4%b8%8b%e6%96%87%e5%b5%8c%e5%85%a5&amp;body=https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/&amp;title=%e3%80%8c%e8%ae%ba%e6%96%87%e9%98%85%e8%af%bb%e3%80%8d-%e5%ad%a6%e4%b9%a0%e7%94%a8%e4%ba%8e%e9%80%9a%e5%8b%a4%e6%b5%81%e5%b5%8c%e5%85%a5%e7%9a%84%e5%9c%b0%e7%90%86%e4%b8%8a%e4%b8%8b%e6%96%87%e5%b5%8c%e5%85%a5" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=%e3%80%8c%e8%ae%ba%e6%96%87%e9%98%85%e8%af%bb%e3%80%8d-%e5%ad%a6%e4%b9%a0%e7%94%a8%e4%ba%8e%e9%80%9a%e5%8b%a4%e6%b5%81%e5%b5%8c%e5%85%a5%e7%9a%84%e5%9c%b0%e7%90%86%e4%b8%8a%e4%b8%8b%e6%96%87%e5%b5%8c%e5%85%a5%20https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://coolgiserz.github.io/publication/learning-geo-embeding-for-commute-flow-prediction/&amp;title=%e3%80%8c%e8%ae%ba%e6%96%87%e9%98%85%e8%af%bb%e3%80%8d-%e5%ad%a6%e4%b9%a0%e7%94%a8%e4%ba%8e%e9%80%9a%e5%8b%a4%e6%b5%81%e5%b5%8c%e5%85%a5%e7%9a%84%e5%9c%b0%e7%90%86%e4%b8%8a%e4%b8%8b%e6%96%87%e5%b5%8c%e5%85%a5" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = false;</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.81c0016b87774b0bb25faf17d087c994.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © Research Group
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
