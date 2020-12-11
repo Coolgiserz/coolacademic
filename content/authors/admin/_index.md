@@ -10,7 +10,7 @@ role: 理学学士
 
 # Organizations/Affiliations
 organizations:
-- name: 中南大学
+- name: 保密大学
   url: ""
 
 # Short bio (displayed in user profile at end of posts)

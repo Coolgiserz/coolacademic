@@ -24,6 +24,11 @@
   weight = 40
 
 [[main]]
+  name = "项目"
+  url = "project"
+  weight = 45
+
+[[main]]
   name = "论文"
   url = "publication"
   weight = 50
@@ -32,3 +37,9 @@
   name = "联系"
   url = "contact"
   weight = 60
+
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+[[main]]
+  name = "简历"
+  url = "files/cv.pdf"
+  weight = 70

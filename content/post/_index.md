@@ -1,5 +1,5 @@
 ---
-title: 近期博客
+title: 博客
 
 # View.
 #   1 = List

@@ -3,7 +3,7 @@
 
 title: "北京之旅 2020"
 event: 
-event_url:
+event_url: 
 location: Beijing
 address:
   street: 
@@ -16,8 +16,8 @@ abstract:
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2020-12-11T00:20:45+08:00
-date_end: 2020-12-11T00:20:45+08:00
+date: 2020-03-11T00:20:45+08:00
+date_end: 2020-03-11T00:20:45+08:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
@@ -67,7 +67,14 @@ slides: ""
 projects: []
 ---
 
-<video id="video" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-<source id="mp4" src="beijing-trip.mp4" type="video/mp4">
+疫情期间
+
+<video id="video1" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="mp4" src="beijing-trip-mid.mp4" type="video/mp4">
 </video>
 
+离京
+
+<video id="video2" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="mp4" src="beijing-trip-end.mp4" type="video/mp4">
+</video>
