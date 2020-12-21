@@ -2,7 +2,7 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
 headless: true
-weight: 25
+weight: 15
 
 title: 近期博客
 subtitle:

@@ -4,7 +4,7 @@ summary: Free and open source GIS in South America.
 authors: []
 tags: []
 categories: []
-date: "2019-02-05T00:00:00Z"
+date: "2020-12-12T00:00:00Z"
 slides:
   # Choose a theme from https://github.com/hakimel/reveal.js#theming
   theme: black
@@ -15,12 +15,12 @@ slides:
 
 ## Free and open source GIS in South America: political inroads and local advocacy
 
-ZhuGuowei, 2020-12-08
+ZhuGuowei, 2020-12-13
 
 ---
 
 ## 0x00 Outline
---- 
+ 
 - Public openness toward FOSS in South America
 
 - FOSS GIS in South America
@@ -221,10 +221,20 @@ Ibero-America has incubated several FOSS GIS programs that are widely used in So
 
 ### Geoinquietos Argentina
 - Geoinquietos is a network of local groups throughout Ibero- America interested in geospatial sciences and FOSS.
+  - the main objective is to  <span style="color: red;">share knowledge and effort</span>
+
+  - the group is completely anarchic; there is  <span style="color: red;">no hierarchy of participants</span>.
+
+  - jovial, relaxed, and occasionally very technical banter
+
+
+--- 
+### Geoinquietos Argentina
+
+
   - The Geoinquietos Argentina chapter has been <span style="color: red;">one of the most active of these groups</span>,
 
   - <span style="color: red;">repeatedly organizing conferences</span> that attract hundreds of people from the Southern Cone area of South America and beyond.
-
 --- 
 ### FOSS.4GIS.GOV conferences in Brazil
 
@@ -236,7 +246,7 @@ Ibero-America has incubated several FOSS GIS programs that are widely used in So
 
 ---
 
-## 0x04 Conclusions
+## 0x05 Conclusions
 ---
 - <span style="color: red;">FOSS GIS has a strong and growing presence in South America</span>, evidenced by
   - government use of FOSS in interactive map websites,
@@ -249,6 +259,10 @@ Ibero-America has incubated several FOSS GIS programs that are widely used in So
 
 - Such affinity toward FOSS includes economic considerations, but also a strong belief <span style="color: red;">that national interest is served by keeping software code transparent and investment money local</span>.
 
+---
+- This article discussed three case studies of particularly successful efforts to promote FOSS GIS and rally local user groups through <span style="color: red;">education and sharing of technical expertise</span>.
+
+- The common thread between these case studies is their <span style="color: red;">ability to connect individuals</span>. 
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "北京之旅 2020"
+title: "疫情之下的北京之旅 2020"
 event: 
 event_url: 
 location: Beijing
@@ -50,7 +50,7 @@ url_slides:
 
 url_code:
 url_pdf:
-url_video: beijing-trip.mp4
+url_video: vedio/beijing-trip.mp4
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
@@ -66,15 +66,26 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-
 疫情期间
 
 <video id="video1" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-<source id="mp4" src="beijing-trip-mid.mp4" type="video/mp4">
+<source id="mp4" src="vedio/beijing-trip-mid.mp4" type="video/mp4">
 </video>
+
+
+Sensetime产品
+
+<video id="ar-product" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="mp4" src="vedio/sensetime-welcome.mp4" type="video/mp4">
+</video>
+
+<video id="ar-product" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
+<source id="mp4" src="vedio/sensetime-product-ar.mp4" type="video/mp4">
+</video>
+
 
 离京
 
 <video id="video2" controls="" preload="none" poster="http://om2bks7xs.bkt.clouddn.com/2017-08-26-Markdown-Advance-Video.jpg">
-<source id="mp4" src="beijing-trip-end.mp4" type="video/mp4">
+<source id="mp4" src="vedio/beijing-trip-end.mp4" type="video/mp4">
 </video>

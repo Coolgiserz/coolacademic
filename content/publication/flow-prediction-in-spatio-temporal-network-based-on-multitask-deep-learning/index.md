@@ -68,3 +68,17 @@ projects: []
 slides: ""
 ---
 # Flow Prediction in Spatio Temporal Network Based on Multitask Deep Learning
+
+影响交通流的要素有哪些？
+- 空间依赖
+- 时间依赖
+- 外部因素
+
+因此要进行交通流预测，需要处理以下关键问题
+- 如何建模空间依赖？
+- 如何建模时间依赖？
+- 如何将有助于交通流预测的外部因素/知识融合到模型中？
+
+
+## 参考资料
+- [Multitask-Learning](https://github.com/mbs0221/Multitask-Learning)
