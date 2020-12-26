@@ -27,7 +27,7 @@ summary: "全世界的地理信息系统从业人员享有越来越多的自由�
 tags: [IJGIS, 开源]
 categories: [论文阅读]
 featured: false
-
+draft: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 # links:

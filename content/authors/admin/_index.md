@@ -14,13 +14,13 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: 我的研究兴趣是城市计算、自然语言处理、金庸小说
+bio: 我的研究兴趣是城市计算、自然语言处理、通俗文学
 
 interests:
 - 人工智能
 - 自然语言处理
 - 时空数据挖掘
-- 武侠小说
+- 通俗文学
 
 education:
   courses:

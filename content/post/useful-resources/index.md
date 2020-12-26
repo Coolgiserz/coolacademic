@@ -140,6 +140,10 @@ projects: []
 
 - [Sublime](http://www.sublimetext.com/)
 
+#### 持续集成
+- jenkins
+- [Travis-CI](https://travis-ci.org)
+
 #### 模拟
 
 - [夜神模拟器](https://www.yeshen.com/)
@@ -205,6 +209,9 @@ projects: []
 
 - [Flaticon](https://www.flaticon.com/)
 
+- [shields.io](https://shields.io)
+徽章制作
+
 ### Logo设计
 
 - [logospire](http://logospire.com/)
@@ -260,7 +267,6 @@ Github
 
 - [伯乐在线整理](https://github.com/jobbole/)
 
-
 论文
 ---------------------------------------
 
@@ -272,9 +278,14 @@ Github
 - http://www.cnkicheck.info/
 
 
+## 社交
+- Discord
+
+一款专为社区设计的免费网络实时通话软件与数字发行平台
+
 学习资源
 -------------------------------
-
+- [oi-wiki](https://oi-wiki.org/lang/)
 - [Git分支](https://learngitbranching.js.org/)
 - [图解Git](https://marklodato.github.io/visual-git-guide/index-zh-cn.html)
 - [GoogleBlog](https://ai.googleblog.com/)

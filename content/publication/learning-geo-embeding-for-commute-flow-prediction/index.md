@@ -4,7 +4,7 @@
 title: "「论文阅读」-学习用于通勤流嵌入的地理上下文嵌入"
 authors: [CoolCats]
 date: 2020-12-09T20:18:23+08:00
-doi: ""
+doi: "10.1609/aaai.v34i01.5425"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2020-12-09T20:18:23+08:00
@@ -78,6 +78,7 @@ slides: ""
 - 什么是地理上下文？
 - 如何对地理上下文信息进行嵌入学习？
 - 该方法工作效果如何？存在什么缺陷吗？
+
 
 ### 通勤流
 
@@ -155,7 +156,7 @@ slides: ""
 
 ### 实验环境
 
-用到了通勤流、土地利用的数据集和距离计算的包。
+用到了[通勤流](https://lehd.ces.census.gov/data/)、[土地利用](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)的数据集和距离计算的包。
 
 ### 实验结果
 

@@ -44,6 +44,6 @@ features = ["page builder", "widgets", "themes", "search", "research publication
 
 # If porting an existing theme
 [original]
-  name = ""
+  name = "wowchemy"
   homepage = ""
   repo = ""

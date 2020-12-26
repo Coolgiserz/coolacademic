@@ -62,7 +62,7 @@ highlight = false
 
 # Enable LaTeX math rendering? true/false
 #   If false, you can enable math on a per page basis as needed.
-math = false
+math = true
 
 # Enable diagram rendering? true/false
 #   If false, you can enable diagrams on a per page basis as needed.
@@ -185,6 +185,7 @@ plugins_js  = []
   post_view = 2
   publication_view = 2
   talk_view = 2
+  project_view = 3
 
 ############################
 ## Comments
@@ -194,14 +195,14 @@ plugins_js  = []
   #   0: Disabled
   #   1: Disqus (https://disqus.com)
   #   2: Commento (https://commento.io)
-  engine = 0
+  engine = 1
 
   # Which page types are commentable?
   commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
 
   # Configuration of Disqus.
   [comments.disqus]
-    shortname = ""  # Paste the shortname from your Disqus dashboard.
+    shortname = "coolgiserz"  # Paste the shortname from your Disqus dashboard.
     show_count = true  # Show comment count in page header? (true/false)
 
   # Configuration of Commento.
@@ -217,7 +218,7 @@ plugins_js  = []
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 0
+  engine = 1
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
@@ -261,7 +262,7 @@ plugins_js  = []
 ############################
 [cms]
   # See https://sourcethemes.com/academic/docs/install/#install-with-web-browser
-  netlify_cms = true
+  netlify_cms = false
 
 ############################
 ## Icon Pack Extensions
