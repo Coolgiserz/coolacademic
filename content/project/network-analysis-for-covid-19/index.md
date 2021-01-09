@@ -2,11 +2,11 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "面向Covid-19国内传播分析的人口流动网络分析"
-summary: ""
+summary: "数据战疫"
 authors: []
 tags: []
 categories: []
-date: 2020-12-13T21:54:39+08:00
+date: 2020-03-13T21:54:39+08:00
 draft: true
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -31,7 +31,7 @@ url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
-
+url_dataset: "https://www.datafountain.cn/datasets/130#"
 # Slides (optional).
 #   Associate this project with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
@@ -39,3 +39,16 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+百度数据
+
+论点：
+### 实验
+地级市人口流动网络重要节点分析
+
+K感染数到达时间与节点重要性特征的相关性分析
+
+网络社区发现
+
+### 结论
+- 
+

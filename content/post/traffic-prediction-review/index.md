@@ -70,6 +70,16 @@ projects: ["awesome-traffic-prediction"]
 - 如何进行交通流数据补全？
 
 #### 如何评价交通流预测的效果？
+##### 评价角度
+-	总体预测精度
+-	局部预测精度：峰值
+-	不同时间划分下的预测精度
+-	对噪声扰动的鲁棒性分析
+##### 评价指标
+- MAE
+- RMSE
+- 准确度
+- 方差
 
 ## 学习资料
 [How to Predict Severe Traffic Jams with Python and Recurrent Neural Networks?](https://towardsdatascience.com/how-to-predict-severe-traffic-jams-with-python-and-recurrent-neural-networks-e53b6d411e8d)
