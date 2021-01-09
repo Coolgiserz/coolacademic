@@ -4,8 +4,8 @@
 title: "关于交通流预测的资源汇总"
 summary: "论文、代码、仓库、研究小组、数据集等"
 authors: []
-tags: []
-categories: []
+tags: [智慧交通]
+categories: [交通流预测]
 date: 2020-12-19T14:16:07+08:00
 
 # Optional external URL for project (replaces project detail page).

@@ -4,8 +4,8 @@
 title: "书单"
 summary: "心灵成长计划"
 authors: []
-tags: []
-categories: []
+tags: [阅读]
+categories: [阅读]
 date: 2019-12-24T18:37:19+08:00
 
 # Optional external URL for project (replaces project detail page).
@@ -69,7 +69,8 @@ slides: ""
 - 射雕英雄传
 - 神雕侠侣
 - 倚天屠龙记
-
+- 笑傲江湖
+- 侠客行（ongoing）
 
 ##### 乔治马丁系列
 - 冰与火之歌
@@ -102,10 +103,15 @@ slides: ""
 
 ### 经济
 - 伟大的博弈
+- 论竞争性市场体制（ongoing）
 
 ### 技术
 #### 编程语言
+- C++ Primer
 - Effective C++
 
 #### 编程思维
 - 大话设计模式
+
+#### 数学与算法
+- 统计自然语言处理（ongoing）

@@ -24,7 +24,7 @@ abstract: "Accurate and real-time traffic forecasting plays an important role in
 # Summary. An optional shortened abstract.
 summary: "准确、实时的交通预测在智能交通系统中发挥着重要作用，对城市交通规划、交通管理和交通控制具有重要意义。但由于受城市路网拓扑结构和随时间动态变化规律的限制，即空间依赖性和时间依赖性，交通预测一直被认为是一个开放的科学问题。为了同时捕捉空间依赖性和时间依赖性，我们提出了一种新型的基于神经网络的交通预测方法，即图卷积网络（GCN）和门控递归单元（GRU）相结合的时间图卷积网络（T-GCN）模型。具体来说，GCN用于学习复杂的拓扑结构以捕捉空间依赖性，门控递归单元用于学习流量数据的动态变化以捕捉时间依赖性。然后，采用T-GCN模型进行基于城市路网的交通预测。实验表明，我们的T-GCN模型可以从交通数据中捕获时空相关性，并且在实际交通数据集上的预测结果优于最新的基准模型。我们的T-GCN的Tensorflow实现见https://github.com/lehaifeng/T-GCN。"
 
-tags: []
+tags: [智慧交通]
 categories: []
 featured: false
 

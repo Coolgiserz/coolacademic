@@ -1,16 +1,16 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Xgboost论文及源代码剖析"
+title: "串口通信小结"
 subtitle: ""
-summary: ""
+summary: "上位机与下位机的对话"
 authors: []
-tags: [机器学习]
+tags: [嵌入式开发]
 categories: []
-date: 2021-01-07T19:30:18+08:00
-lastmod: 2021-01-07T19:30:18+08:00
+date: 2020-02-19T20:27:56+08:00
+lastmod: 2020-02-19T20:27:56+08:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -27,6 +27,11 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-## 资源地址
+## 前言
+接触的一个智能门锁项目涉及到嵌入式设备的调试，本文简单总结串口通信相关知识，回答如下问题：
+- 什么是上位机、下位机？
+- 上位机与下位机之间如何通信？
+- 如何进行串口通信？
 
-[XGBOOST源代码Github地址](https://github.com/dmlc/xgboost)
+
+

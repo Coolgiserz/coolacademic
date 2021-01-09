@@ -4,7 +4,7 @@
 title: "基于RFM和Kmeans的用户分群"
 summary: "基于聚类分析的个性化营销"
 authors: []
-tags: [聚类]
+tags: [聚类, 机器学习, 个性化营销]
 categories: [聚类, 个性化营销]
 date: 2020-06-08T10:40:17+08:00
 

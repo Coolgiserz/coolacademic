@@ -28,4 +28,3 @@ content:
 design:
   columns: '1'
 ---
-

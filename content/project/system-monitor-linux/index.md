@@ -4,7 +4,7 @@
 title: "简易Linux系统监视器实现"
 summary: "为电脑做CT"
 authors: []
-tags: []
+tags: [C++, OOP]
 categories: []
 date: 2020-12-21T20:27:11+08:00
 draft: true

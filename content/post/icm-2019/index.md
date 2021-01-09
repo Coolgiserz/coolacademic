@@ -5,7 +5,7 @@ title: "MCM/ICM 2019 Problem E"
 subtitle: "Problem E: What is the Cost of Environmental Degradation"
 summary: "美国大学生数学建模竞赛2019问题E资料小结"
 authors: []
-tags: []
+tags: [数学建模,书签]
 categories: []
 date: 2019-01-29T23:02:35+08:00
 lastmod: 2019-01-29T23:02:35+08:00

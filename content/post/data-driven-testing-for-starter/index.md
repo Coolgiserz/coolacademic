@@ -1,16 +1,16 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Xgboost论文及源代码剖析"
+title: "认识数据驱动的测试"
 subtitle: ""
-summary: ""
+summary: "测试的第X范式？"
 authors: []
-tags: [机器学习]
-categories: []
-date: 2021-01-07T19:30:18+08:00
-lastmod: 2021-01-07T19:30:18+08:00
+tags: [测试]
+categories: [测试]
+date: 2020-03-09T20:20:57+08:00
+lastmod: 2020-03-09T20:20:57+08:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -27,6 +27,3 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-## 资源地址
-
-[XGBOOST源代码Github地址](https://github.com/dmlc/xgboost)

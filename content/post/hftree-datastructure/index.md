@@ -5,8 +5,8 @@ title: "哈夫曼编码及其实现"
 subtitle: ""
 summary: "哈夫曼编码——无损数据压缩的熵编码算法"
 authors: []
-tags: []
-categories: []
+tags: [数据结构, 哈夫曼树, 算法]
+categories: [数据结构, 算法]
 date: 2018-12-19T22:55:46+08:00
 lastmod: 2018-12-10T22:55:46+08:00
 featured: false

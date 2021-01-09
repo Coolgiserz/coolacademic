@@ -25,7 +25,7 @@ abstract: "Timely accurate traffic forecast is crucial for urban traffic control
 # Summary. An optional shortened abstract.
 summary: "及时准确的交通预测对城市交通控制和引导至关重要。由于交通流的高度非线性和复杂性，传统方法无法满足中长期预测任务的要求，而且往往忽略了空间和时间上的依赖性。本文提出了一种新型的深度学习框架--时空图卷积网络(STGCN)来解决交通领域的时间序列预测问题。我们没有应用常规的卷积和递归单元，而是将问题制定在图上，并建立具有完整卷积结构的模型，这样可以用较少的参数实现更快的训练速度。实验表明，我们的模型STGCN通过对多尺度交通网络的建模，有效地捕捉了全面的时空相关性，并在各种真实世界的交通数据集上持续优于最先进的基线。"
 
-tags: []
+tags: [智慧交通]
 categories: []
 featured: false
 draft: false

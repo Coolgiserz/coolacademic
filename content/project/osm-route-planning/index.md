@@ -4,6 +4,11 @@ summary: 路径规划C++项目
 tags:
 - OSM
 - C++
+- 路径规划
+- A*算法
+- 算法
+
+categories: [路径规划, 算法]
 date: "2020-04-27T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

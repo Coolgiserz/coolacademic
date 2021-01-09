@@ -3,8 +3,9 @@ widget: tag_cloud
 headless: true  # This file represents a page section.
 
 # ... Put Your Section Options Here (title etc.) ...
-
-title: 归档
+# Order that this section appears on the page.
+weight: 15
+title: 内容归档
 subtitle:
 
 content:
