@@ -76,10 +76,20 @@ projects: ["awesome-traffic-prediction"]
 -	不同时间划分下的预测精度
 -	对噪声扰动的鲁棒性分析
 ##### 评价指标
-- MAE
-- RMSE
-- 准确度
+- 绝对平均误差（MAE）
+![](images/mae.png)
+
+- 均方根误差（RMSE）
+![](images/rmse.png)
+
+- 准确度（Accuracy）
+![](images/accuracy.png)
+
+- 判定系数
+![](images/coefficient_of_determination.png)
+
 - 方差
+![](images/variance.png)
 
 ## 学习资料
 [How to Predict Severe Traffic Jams with Python and Recurrent Neural Networks?](https://towardsdatascience.com/how-to-predict-severe-traffic-jams-with-python-and-recurrent-neural-networks-e53b6d411e8d)

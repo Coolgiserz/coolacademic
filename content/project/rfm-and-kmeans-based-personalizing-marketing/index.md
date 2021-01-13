@@ -6,7 +6,7 @@ summary: "基于聚类分析的个性化营销"
 authors: []
 tags: [聚类, 机器学习, 个性化营销]
 categories: [聚类, 个性化营销]
-date: 2020-06-08T10:40:17+08:00
+date: 2020-02-19T10:40:17+08:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
