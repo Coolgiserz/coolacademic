@@ -75,6 +75,7 @@ projects: ["awesome-traffic-prediction"]
 -	局部预测精度：峰值
 -	不同时间划分下的预测精度
 -	对噪声扰动的鲁棒性分析
+
 ##### 评价指标
 - 绝对平均误差（MAE）
 ![](images/mae.png)
@@ -90,6 +91,15 @@ projects: ["awesome-traffic-prediction"]
 
 - 方差
 ![](images/variance.png)
+
+## 模型
+#### 交通流预测模型面临的挑战
+虽然现有的海量交通数据、高性能计算和存储平台、丰富的机器学习算法也为交通流预测提供了巨大的机遇，但由于数据本身的问题和现实世界中交通流影响因子的复杂性，交通流预测仍面临着巨大的挑战，这些挑战主要可归为如下三个方面：
+(1).	交通大数据的多尺度特性、有偏性、不完备性等特性影响着交通流预测结果的准确性和可用性
+传感器通常每隔一定时间对数据进行采样，不同的采样尺度
+(2).	地理单元间的复杂的时空依赖关系对模型的复杂度提出了较高要求
+地理单元（道路、OD点）
+(3).	影响交通流多种外部因素带来的不确定性
 
 ## 学习资料
 [How to Predict Severe Traffic Jams with Python and Recurrent Neural Networks?](https://towardsdatascience.com/how-to-predict-severe-traffic-jams-with-python-and-recurrent-neural-networks-e53b6d411e8d)

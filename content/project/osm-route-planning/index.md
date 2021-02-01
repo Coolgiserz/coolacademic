@@ -292,7 +292,8 @@ g值和h值
 - 集成更多路径规划算法
 
 ## 0x04 相关资源
-### A*算法及其改进
+### A*算法及其改进思路
+#### 关于A*算法
 - [A*搜索算法 Wiki](https://zh.wikipedia.org/zh-hans/A*搜尋演算法)
 
 - [Introduction to A*](http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html)
@@ -307,7 +308,8 @@ g值和h值
 
 - [Yet another bidirectional algorithm for shortest paths](http://localhost:1313/project/osm-route-planning/pdf/Yet-another-bidirectional-algorithm-for-shortest-paths.pdf)
 
-
+#### A*改进思路
+- [Empowering A ∗ Search Algorithms with Neural Networks for Personalized Route Recommendation](https://dl.acm.org/doi/abs/10.1145/3292500.3330824)
 ### 地图表示
 - [Map representations](http://theory.stanford.edu/~amitp/GameProgramming/MapRepresentations.html#waypoints)
 

@@ -17,7 +17,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: ""
-publication_short: "TKDE"
+publication_short: "TKDE 2020"
 
 abstract: ""
 
@@ -78,7 +78,10 @@ slides: ""
 - 如何建模空间依赖？
 - 如何建模时间依赖？
 - 如何将有助于交通流预测的外部因素/知识融合到模型中？
+![](images/fig2.png)
 
+![](images/fig3.png)
 
+![](images/fig4.png)
 ## 参考资料
 - [Multitask-Learning](https://github.com/mbs0221/Multitask-Learning)

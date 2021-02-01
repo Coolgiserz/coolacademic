@@ -10,7 +10,7 @@ categories: []
 date: 2020-12-10T20:43:31+08:00
 lastmod: 2020-12-10T20:43:31+08:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -27,10 +27,16 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-自注意力机制
-从序列预测问题开始，到自注意力机制
-RNN到LSTM
-注意力机制
-注意力机制的变种
-自注意力机制
-自注意力机制的缺点
+## 注意力机制
+### 自注意力机制
+#### 从序列预测问题开始，到自注意力机制
+#### RNN到LSTM
+### 注意力机制
+注意力机制是建模
+### 注意力机制的变种
+### 自注意力机制
+### 自注意力机制的缺点
+
+## 代码资源
+- [Self-Attention-Keras-Github](https://github.com/foamliu/Self-Attention-Keras)
+- [Attention-PyTorch-Github](https://github.com/EvilPsyCHo/Attention-PyTorch)
